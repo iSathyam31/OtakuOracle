@@ -21,7 +21,8 @@ OtakuOracle/
 ├── app.py
 ├── assets/
 │ ├── images/
-|__ Demo.mp4
+│ └── video/
+│ └── demo_video.mp4
 ├── LICENSE
 ```
 
