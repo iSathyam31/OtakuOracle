@@ -22,7 +22,7 @@ OtakuOracle/
 ├── assets/
 │ ├── images/
 │ └── video/
-│ └── demo_video.mp4
+│ └── Demo.mp4
 ├── LICENSE
 ```
 
