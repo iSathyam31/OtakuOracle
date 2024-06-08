@@ -77,7 +77,7 @@ chat = genai.GenerativeModel("gemini-pro")
 chat = chat.start_chat(history=[])
 
 # Initialize Streamlit app
-st.set_page_config(page_title="Anime & Health App", layout="wide")
+st.set_page_config(page_title="OtakuOracle", layout="wide")
 
 # Sidebar navigation
 page = st.sidebar.selectbox("Select Service", ["Anime Recommender", "Talk to Anime Character", "Anime Face Detect"])
