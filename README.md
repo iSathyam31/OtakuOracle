@@ -13,7 +13,7 @@ This project is a comprehensive platform for anime enthusiasts, providing featur
 
 
 ## Folder Structure
-
+```
 OtakuOracle/
 │
 ├── README.md
@@ -24,7 +24,7 @@ OtakuOracle/
 │ └── video/
 │ └── demo_video.mp4
 ├── LICENSE
-
+```
 
 ## Setup Instructions
 Follow these steps to set up the AnimeVerse project on your local machine:
