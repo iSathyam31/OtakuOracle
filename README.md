@@ -9,7 +9,7 @@ This project is a comprehensive platform for anime enthusiasts, providing featur
 
 
 ## Demo Video
-![Demo Video](Demo.mp4)
+[Demo Video](assets/video/Demo.mp4)
 
 
 ## Folder Structure
