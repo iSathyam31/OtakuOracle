@@ -77,53 +77,55 @@ chat = genai.GenerativeModel("gemini-pro")
 chat = chat.start_chat(history=[])
 
 # Initialize Streamlit app
-st.set_page_config(page_title="OtakuOracle", layout="wide")
+st.set_page_config(page_title="OtakuOracle 🌟", layout="wide")
 
 # Sidebar navigation
-page = st.sidebar.selectbox("Select Service", ["Anime Recommender", "Talk to Anime Character", "Anime Face Detect"])
+page = st.sidebar.selectbox("Select Service", ["Anime Recommender 🌟", "Talk to Anime Character 🗣️", "Anime Face Detect 👀"])
 
 # Page for Anime Recommender
-if page == "Anime Recommender":
-    st.header("Anime Recommender System")
+if page == "Anime Recommender 🌟":
+    st.header("Anime Recommender System 🎬")
 
     # Get user input
-    input_anime = st.text_input("Input Anime Title: ", key="input_anime")
-    submit_anime = st.button("Get Recommendations")
+    input_anime = st.text_input("Input Anime Title: ", key="input_anime", help="Enter the title of an anime you like and get similar recommendations! 🍿")
+    submit_anime = st.button("Get Recommendations 🚀")
 
     # Process the input and get recommendations
     if submit_anime and input_anime:
+        st.info("Fetching recommendations... 🔍")
         response = get_anime_recommendations(input_anime)
         recommendations = format_anime_recommendation(response)
         
         # Display the recommendations
-        st.subheader("Anime Recommendations")
+        st.subheader("Anime Recommendations 📜")
         for rec in recommendations:
-            st.write(f"**Anime:** {rec['Anime']}")
-            st.write(f"**Genre:** {rec['Genre']}")
-            st.write(f"**Main Protagonists:** {rec['Main Protagonists']}")
-            st.write(f"**Summary:** {rec['Summary']}")
+            st.write(f"**Anime:** {rec['Anime']} 📺")
+            st.write(f"**Genre:** {rec['Genre']} 🎭")
+            st.write(f"**Main Protagonists:** {rec['Main Protagonists']} 🧑‍🤝‍🧑")
+            st.write(f"**Summary:** {rec['Summary']} 📝")
             st.write("---")
 
 # Page for Talking to Anime Character
-elif page == "Talk to Anime Character":
-    st.header("Chat with an Anime Character")
+elif page == "Talk to Anime Character 🗣️":
+    st.header("Chat with an Anime Character 💬")
 
     # Get user input
-    character = st.text_input("Anime Character Name: ", key="character")
-    question = st.text_input("Your Question: ", key="question")
-    submit_character = st.button("Ask the character")
+    character = st.text_input("Anime Character Name: ", key="character", help="Enter the name of an anime character you want to talk to! 🧙‍♂️")
+    question = st.text_input("Your Question: ", key="question", help="Ask your question here! ❓")
+    submit_character = st.button("Ask the character 🙋")
 
     # Process the input and get a response
     if submit_character and character and question:
+        st.info("Getting response from character... 💭")
         response = get_anime_character_response(character, question)
         
         # Display the response
-        st.subheader(f"Response from {character}")
+        st.subheader(f"Response from {character} 🗨️")
         st.write(response)
 
 # Page for Anime Face Detect
-elif page == "Anime Face Detect":
-    st.header("Anime Character Detector")
+elif page == "Anime Face Detect 👀":
+    st.header("Anime Character Detector 🕵️")
 
     input_prompt = """
     You are an expert in the world of Anime where you need to see characters from the image and provide the details of every character in this below format:
@@ -139,17 +141,18 @@ elif page == "Anime Face Detect":
     'Kindly provide a character from Anime'
     """
 
-    input_text = st.text_input("Input Prompt: ", key="input_text")
-    uploaded_file = st.file_uploader("Choose an image...", type=["jpg", "jpeg", "png"])
+    input_text = st.text_input("Input Prompt: ", key="input_text", help="Enter your custom prompt here! 📜")
+    uploaded_file = st.file_uploader("Choose an image... 📷", type=["jpg", "jpeg", "png"])
     image = ""
     if uploaded_file is not None:
         image = Image.open(uploaded_file)
-        st.image(image, caption="Uploaded Image.", use_column_width=True)
+        st.image(image, caption="Uploaded Image. 🖼️", use_column_width=True)
 
-    submit_image = st.button("Tell me the Character")
+    submit_image = st.button("Tell me the Character 🎭")
 
     if submit_image:
+        st.info("Analyzing the image... 🔍")
         image_data = input_image_setup(uploaded_file)
         response = get_gemini_response(input_text, image_data, input_prompt)
-        st.subheader("The Response is")
+        st.subheader("The Response is 📢")
         st.write(response)
