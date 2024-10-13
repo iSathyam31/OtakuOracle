@@ -1,13 +1,3 @@
----
-title: Otaku Oracle
-emoji: 😎
-colorFrom: blue
-colorTo: red
-sdk: streamlit
-app_file: app.py
-pinned: false
----
-
 ## OtakuOracle
 This project is a comprehensive platform for anime enthusiasts, providing features such as anime recommendations, chatting with anime characters, and anime character detection from images.
 
