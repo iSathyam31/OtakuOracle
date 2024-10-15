@@ -27,16 +27,16 @@ OtakuOracle/
 ```
 
 ## Setup Instructions
-Follow these steps to set up the AnimeVerse project on your local machine:
+Follow these steps to set up the OtakuOracle project on your local machine:
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your_username/AnimeVerse.git
+    git clone https://github.com/iSathyam31/OtakuOracle.git
     ```
 
 2. Navigate to the project directory:
     ```bash
-    cd AnimeVerse
+    cd OtakuOracle
     ```
 
 3. Create a virtual environment (optional but recommended):
