@@ -1,3 +1,13 @@
+---
+title: OtakuOracle
+emoji: 🌸
+colorFrom: White
+colorTo: Pink
+sdk: streamlit
+app_file: app.py
+pinned: false
+---
+
 ## OtakuOracle
 This project is a comprehensive platform for anime enthusiasts, providing features such as anime recommendations, chatting with anime characters, and anime character detection from images.
 
@@ -6,10 +16,6 @@ This project is a comprehensive platform for anime enthusiasts, providing featur
 - **Anime Recommender:** Get recommendations for anime titles based on your input.
 - **Chat with Anime Characters:** Interact with AI-generated responses in the style of your favorite anime characters.
 - **Anime Character Detection:** Upload an image and receive details about the anime characters detected in the image.
-
-
-## Demo Video
-[Demo Video](assets/video/Demo.mp4)
 
 
 ## Folder Structure
@@ -21,8 +27,6 @@ OtakuOracle/
 ├── app.py
 ├── assets/
 │ ├── images/
-│ └── video/
-│ └── Demo.mp4
 ├── LICENSE
 ```
 
