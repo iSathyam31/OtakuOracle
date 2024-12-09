@@ -73,7 +73,7 @@ def input_image_setup(uploaded_file):
         raise FileNotFoundError("No file uploaded")
 
 # Initialize the Gemini Pro model for anime character chat
-chat = genai.GenerativeModel("gemini-pro") 
+chat = genai.GenerativeModel("gemini-1.5-flash-002") 
 chat = chat.start_chat(history=[])
 
 # Initialize Streamlit app
