@@ -16,7 +16,7 @@ jobs:
           lfs: true
       - name: Remove binary files
         run: |
-          git rm --cached assets/images/Guess_the_Character.png assets/images/Tengen.png assets/images/Gojo.png
+          git rm --cached assets/images/Guess_the_Character.png assets/images/Talk_to_Character.png assets/images/Recommender_System.png
           git commit -m "Remove binary files"
       - name: Push to hub
         env:
